@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/Embedded/STM32-Learning/01-LED-Blink/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

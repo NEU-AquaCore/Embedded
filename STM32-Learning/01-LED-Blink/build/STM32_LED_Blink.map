@@ -1,0 +1,183 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x4 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+ .data          0x00000000        0x0 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+ .bss           0x00000000        0x0 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+ .group         0x00000000        0xc CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .text          0x00000000        0x0 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .data          0x00000000        0x0 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x20000000         0x00005000         xrw
+FLASH            0x08000000         0x00010000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+LOAD CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+START GROUP
+LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a
+LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a
+END GROUP
+                0x20005000                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x00000200                        _Min_Heap_Size = 0x200
+                0x00000400                        _Min_Stack_Size = 0x400
+
+.isr_vector     0x08000000       0x40
+                0x08000000                        . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000       0x40 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+                0x08000040                        . = ALIGN (0x4)
+
+.text           0x08000040       0xc4
+                0x08000040                        . = ALIGN (0x4)
+ *(.text)
+ *(.text*)
+ .text.Reset_Handler
+                0x08000040       0x40 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+                0x08000040                Reset_Handler
+ .text.Default_Handler
+                0x08000080        0x4 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+                0x08000080                Default_Handler
+ .text.delay    0x08000084       0x22 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ *fill*         0x080000a6        0x2 
+ .text.main     0x080000a8       0x5c CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+                0x080000a8                main
+ *(.rodata)
+ *(.rodata*)
+                0x08000104                        . = ALIGN (0x4)
+                0x08000104                        _etext = .
+
+.glue_7         0x08000104        0x0
+ .glue_7        0x08000104        0x0 linker stubs
+
+.glue_7t        0x08000104        0x0
+ .glue_7t       0x08000104        0x0 linker stubs
+
+.vfp11_veneer   0x08000104        0x0
+ .vfp11_veneer  0x08000104        0x0 linker stubs
+
+.v4_bx          0x08000104        0x0
+ .v4_bx         0x08000104        0x0 linker stubs
+
+.iplt           0x08000104        0x0
+ .iplt          0x08000104        0x0 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+
+.rel.dyn        0x08000104        0x0
+ .rel.iplt      0x08000104        0x0 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+
+.ARM.extab
+ *(.ARM.extab*)
+
+.ARM.exidx
+ *(.ARM.exidx*)
+                0x08000104                        _sidata = LOADADDR (.data)
+
+.data           0x20000000        0x0 load address 0x08000104
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sdata = .
+ *(.data)
+ *(.data*)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _edata = .
+
+.igot.plt       0x20000000        0x0 load address 0x08000104
+ .igot.plt      0x20000000        0x0 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+
+.bss            0x20000000        0x0 load address 0x08000104
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sbss = .
+ *(.bss)
+ *(.bss*)
+ *(COMMON)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _ebss = .
+
+._user_heap_stack
+                0x20000000      0x600 load address 0x08000104
+                0x20000000                        . = ALIGN (0x8)
+                0x20000200                        . = (. + _Min_Heap_Size)
+ *fill*         0x20000000      0x200 
+                0x20000600                        . = (. + _Min_Stack_Size)
+ *fill*         0x20000200      0x400 
+                0x20000600                        . = ALIGN (0x8)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+OUTPUT(STM32_LED_Blink.elf elf32-littlearm)
+LOAD linker stubs
+LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a
+LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libm.a
+LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a
+
+.ARM.attributes
+                0x00000000       0x2f
+ .ARM.attributes
+                0x00000000       0x21 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+ .ARM.attributes
+                0x00000021       0x2d CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+
+.comment        0x00000000       0x45
+ .comment       0x00000000       0x45 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+                                 0x46 (size before relaxing)
+
+.debug_line     0x00000000      0x305
+ .debug_line    0x00000000       0x76 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+ .debug_line    0x00000076      0x28f CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+
+.debug_line_str
+                0x00000000       0x68
+ .debug_line_str
+                0x00000000       0x68 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+
+.debug_info     0x00000000       0xe9
+ .debug_info    0x00000000       0x23 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+ .debug_info    0x00000023       0xc6 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+
+.debug_abbrev   0x00000000       0x97
+ .debug_abbrev  0x00000000       0x12 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+ .debug_abbrev  0x00000012       0x85 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+
+.debug_aranges  0x00000000       0x50
+ .debug_aranges
+                0x00000000       0x28 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+ .debug_aranges
+                0x00000028       0x28 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+
+.debug_str      0x00000000     0x3ce2
+ .debug_str     0x00000000     0x3ce2 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+                                 0x76 (size before relaxing)
+ .debug_str     0x00003ce2     0x3dfe CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+
+.debug_rnglists
+                0x00000000       0x32
+ .debug_rnglists
+                0x00000000       0x19 CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj
+ .debug_rnglists
+                0x00000019       0x19 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+
+.debug_macro    0x00000000      0xf88
+ .debug_macro   0x00000000       0x81 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .debug_macro   0x00000081      0xaba CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .debug_macro   0x00000b3b       0x22 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .debug_macro   0x00000b5d       0x8e CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .debug_macro   0x00000beb       0x51 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .debug_macro   0x00000c3c      0x103 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .debug_macro   0x00000d3f       0x6a CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+ .debug_macro   0x00000da9      0x1df CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj
+
+.debug_frame    0x00000000       0x54
+ .debug_frame   0x00000000       0x54 CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj

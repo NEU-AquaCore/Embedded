@@ -1,0 +1,4 @@
+# ninja log v7
+33	69	8159358879694411	CMakeFiles/STM32_LED_Blink.dir/startup/startup.s.obj	31d86cee402e331c
+42	117	8159358879827689	CMakeFiles/STM32_LED_Blink.dir/src/main.c.obj	f661e225a187ecab
+118	424	8159358880586326	STM32_LED_Blink.elf	bebe3e78f2d5fee8
