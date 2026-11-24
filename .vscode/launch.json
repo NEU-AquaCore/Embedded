@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "02: SysTick LED (ST-Link)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/STM32-Learning/02-SysTick-LED/build/STM32_SysTick_LED.elf",
+            "device": "STM32F103C8",
+            "configFiles": [
+                "${workspaceFolder}/STM32-Learning/02-SysTick-LED/debug/openocd.cfg"
+            ],
+            "searchDir": [
+                "E:/MarinePerception/Embeded/tools/openocd/xpack-openocd-0.12.0-7/openocd/scripts"
+            ],
+            "runToEntryPoint": "main",
+            "preLaunchTask": "02: Build"
+        }
+    ]
+}

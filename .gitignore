@@ -1,0 +1,4 @@
+# 只忽略生成的构建目录；不会移除 01 实验里已经被 Git 跟踪的文件。
+STM32-Learning/**/build/
+# 板上原固件备份仅保留在本机，避免误提交。
+STM32-Learning/**/backups/

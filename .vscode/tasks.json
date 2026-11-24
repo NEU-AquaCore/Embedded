@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "02: Configure",
+            "type": "process",
+            "command": "${config:cmake.cmakePath}",
+            "args": [
+                "-S", "${workspaceFolder}/STM32-Learning/02-SysTick-LED",
+                "-B", "${workspaceFolder}/STM32-Learning/02-SysTick-LED/build",
+                "-G", "Ninja",
+                "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/STM32-Learning/02-SysTick-LED/cmake/arm-none-eabi.cmake",
+                "-DCMAKE_BUILD_TYPE=Debug"
+            ],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": []
+        },
+        {
+            "label": "02: Build",
+            "type": "process",
+            "command": "${config:cmake.cmakePath}",
+            "args": [
+                "--build", "${workspaceFolder}/STM32-Learning/02-SysTick-LED/build"
+            ],
+            "options": { "cwd": "${workspaceFolder}" },
+            "dependsOn": ["02: Configure"],
+            "dependsOrder": "sequence",
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
